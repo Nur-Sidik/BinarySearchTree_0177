@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-class node 
+class Node 
 {
     public:
         int info;
-        node *leftchild;
-        node *rightchild;
+        Node *leftchild;
+        Node *rightchild;
 
         //constructor untuk class node
-        node()
+        Node()
         {
             leftchild = nullptr; //inisialisasi left child jadi null
             rightchild = nullptr; //inisialisasi right child jadi null
@@ -19,7 +19,7 @@ class node
 class BinaryTree
 {
     public:
-        node *ROOT;
+        Node *ROOT;
 
         BinaryTree()
         {
@@ -31,6 +31,14 @@ class BinaryTree
             int x;
             cout << "Masukkan Sebuah Nilai = ";
             cin >> x;
-        }
+
+            //step selanjutnya mengalokasikan memori untuk node baru
+            Node *newNode = new Node();
+
+            //setelah itu, kita akan mengisi informasi pada node baru tersebut
+            newNode->info = x;
+
+            newNode->leftchild = nullptr; //inisialisasi left child jadi null
+            newNode->rightchild = nullptr; //inisialisasi right child jadi null
 
 };
