@@ -129,3 +129,9 @@ class BinaryTree
             return ROOT == nullptr;
         }
 };
+
+int main()
+{
+    BinaryTree x;
+
+};
