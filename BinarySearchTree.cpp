@@ -124,4 +124,8 @@ class BinaryTree
             cout << ptr->info << " ";
         }
 
+        bool isEmpty()
+        {
+            return ROOT == nullptr;
+        }
 };
