@@ -109,4 +109,19 @@ class BinaryTree
             preorder(ptr->rightchild);
         }
 
+        void postorder(Node *ptr)
+        {
+            if (isEmpty())
+            {
+                cout << "Tree dalam kondisi Kosong" << endl;
+                return;
+            }
+            if (ptr == nullptr)
+                return;
+
+            postorder(ptr->leftchild);
+            postorder(ptr->rightchild);
+            cout << ptr->info << " ";
+        }
+
 };
