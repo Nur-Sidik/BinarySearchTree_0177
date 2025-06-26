@@ -15,3 +15,8 @@ class node
             rightchild = nullptr; //inisialisasi right child jadi null
         }
 };
+
+class BinaryTree
+{
+
+};
