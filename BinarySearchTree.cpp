@@ -52,7 +52,7 @@ class BinaryTree
                 return;
             }
 
-            if (x <  parent->info)
+            if (x < parent->info)
             {
                 parent->leftchild = newNode;
                 return;
@@ -69,7 +69,7 @@ class BinaryTree
         {
             currentNode = ROOT;
             parent = nullptr;
-            while ((currentNode !=nullptr) && (currentNode->info != element))
+            while ((currentNode != nullptr) && (currentNode->info != element))
             {
                 parent = currentNode;
                 if (element < currentNode->info)
@@ -78,4 +78,20 @@ class BinaryTree
                     currentNode = currentNode->rightchild;
             }
         }
+
+        void inorder(Node *ptr)
+        {
+            if (isEmpty())
+            {
+                cout << "Tree dalam kondisi Kosong" << endl;
+                return;
+            }
+            if (ptr == nullptr)
+                return;
+
+            inorder(ptr->leftchild);
+            cout << ptr->info << " ";
+            inorder(ptr->rightchild);
+        }
+
 };
