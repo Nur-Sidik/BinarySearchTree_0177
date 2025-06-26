@@ -93,5 +93,20 @@ class BinaryTree
             cout << ptr->info << " ";
             inorder(ptr->rightchild);
         }
+        
+        void preorder(Node *ptr)
+        {
+            if (isEmpty())
+            {
+                cout << "Tree dalam kondisi Kosong" << endl;
+                return;
+            }
+            if (ptr == nullptr)
+                return;
+
+            cout << ptr->info << " ";
+            preorder(ptr->leftchild);
+            preorder(ptr->rightchild);
+        }
 
 };
