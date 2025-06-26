@@ -26,4 +26,11 @@ class BinaryTree
             ROOT = nullptr; //inisialisasi root jadi null
         }
 
+        void insert()
+        {
+            int x;
+            cout << "Masukkan Sebuah Nilai = ";
+            cin >> x;
+        }
+
 };
