@@ -41,4 +41,8 @@ class BinaryTree
             newNode->leftchild = nullptr; //inisialisasi left child jadi null
             newNode->rightchild = nullptr; //inisialisasi right child jadi null
 
+            Node *parent = nullptr;
+            Node *currentNode = nullptr;
+            search(x, parent, currentNode);
+
 };
